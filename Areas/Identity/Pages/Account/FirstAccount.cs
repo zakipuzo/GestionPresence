@@ -62,7 +62,6 @@ namespace gestionpresence.Areas.Identity.Pages.Account
             [Required]
             [Display(Name = "Prénom")]
             public string Prenom { get; set; }
-
             
 
             [Required]
@@ -123,18 +122,17 @@ namespace gestionpresence.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            Console.WriteLine("naaaaadiiiii");
             returnUrl = returnUrl ?? Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
                 var user = new AppUser
                 {
-                    UserName = Input.Nom,
+                    UserName = Input.Email,
                     Email = Input.Email,
                     Nom = Input.Nom,
                     Prenom = Input.Prenom,
-                    CodeRFID="nothing",
+                    CodeRFID="nocode",
                     EmailConfirmed=true,
                 };
 

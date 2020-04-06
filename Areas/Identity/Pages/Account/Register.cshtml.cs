@@ -128,7 +128,7 @@ namespace gestionpresence.Areas.Identity.Pages.Account
             {
                 var user = new AppUser
                 {
-                    UserName = Input.Nom,
+                    UserName = Input.Email,
                     Email = Input.Email,
                     Nom = Input.Nom,
                     Prenom = Input.Prenom,
