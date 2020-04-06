@@ -30,8 +30,8 @@ namespace gestionpresence
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<IdentityUser,IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultUI();
             services.AddRazorPages();
         }
 
@@ -54,12 +54,12 @@ namespace gestionpresence
             app.UseStaticFiles();
 
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+            
                 endpoints.MapRazorPages();
             });
         }

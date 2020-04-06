@@ -16,11 +16,13 @@ namespace gestionpresence.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+         
             
             modelBuilder.Entity<AppUser>()
                 .HasIndex(b => b.CodeRFID)
                 .IsUnique();
+
+              base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<AppUser> AppUSers { get; set; }
