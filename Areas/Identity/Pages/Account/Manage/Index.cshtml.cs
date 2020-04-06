@@ -20,6 +20,7 @@ namespace gestionpresence.Areas.Identity.Pages.Account.Manage
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            StatusMessage=null;
         }
 
         public string Username { get; set; }
@@ -52,6 +53,7 @@ namespace gestionpresence.Areas.Identity.Pages.Account.Manage
 
         public async Task<IActionResult> OnGetAsync()
         {
+            
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {

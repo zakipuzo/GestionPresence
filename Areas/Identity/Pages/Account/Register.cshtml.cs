@@ -29,12 +29,15 @@ namespace gestionpresence.Areas.Identity.Pages.Account
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ApplicationDbContext _db;
 
+        public List<SelectListItem> rolesoptions;
+
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             RoleManager<IdentityRole> roleManager,
              ApplicationDbContext db
+
             )
         {
             _userManager = userManager;
@@ -42,6 +45,13 @@ namespace gestionpresence.Areas.Identity.Pages.Account
             _logger = logger;
             _roleManager = roleManager;
             _db = db;
+
+            rolesoptions=_db.Roles.Select(a =>
+                                   new SelectListItem
+                                   {
+                                       Value = a.Id.ToString(),
+                                       Text = a.Name
+                                   }).ToList();
         }
 
         [BindProperty]
@@ -49,8 +59,11 @@ namespace gestionpresence.Areas.Identity.Pages.Account
 
 
 
-        public string ReturnUrl { get; set; }
+        [TempData]
+        public string StatusMessage { get; set; }
 
+       
+       
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
         public class InputModel
@@ -91,8 +104,9 @@ namespace gestionpresence.Areas.Identity.Pages.Account
 
 
         public List<SelectListItem> Options { get; set; }
-        public async Task OnGetAsync(string returnUrl = null)
+        public async Task OnGetAsync()
         {
+
             //zack
             if (!await _roleManager.RoleExistsAsync(UserRoles.Admin))
             {
@@ -110,20 +124,13 @@ namespace gestionpresence.Areas.Identity.Pages.Account
 
 
 
-            Options = _db.Roles.Select(a =>
-                                   new SelectListItem
-                                   {
-                                       Value = a.Id.ToString(),
-                                       Text = a.Name
-                                   }).ToList();
-            ReturnUrl = returnUrl;
-            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            
+
+            //ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync()
         {
-            returnUrl = returnUrl ?? Url.Content("~/");
-            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
                 var user = new AppUser
@@ -137,6 +144,7 @@ namespace gestionpresence.Areas.Identity.Pages.Account
                 };
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
+
                 if (result.Succeeded)
                 {   
 
@@ -150,41 +158,29 @@ namespace gestionpresence.Areas.Identity.Pages.Account
 
                     _logger.LogInformation("User created a new account with password.");
 
-                    /*  var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                        var callbackUrl = Url.Page(
-                            "/Account/ConfirmEmail",
-                            pageHandler: null,
-                            values: new { area = "Identity", userId = user.Id, code = code },
-                            protocol: Request.Scheme);
+                   
+                   StatusMessage = "L'utilisateur "+Input.Nom +"a été bien ajouté";
 
-                    /*   await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                           $"Please confirm your account by <a href='{HtmlEncoder.Default.Enco de(callbackUrl)}'>clicking here</a>.");
-   */
-                /*    if (_userManager.Options.SignIn.RequireConfirmedAccount)
-                    {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email });
-                    }
-                    else
-                    {*/
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
-                  /*  }*/
+                  return RedirectToPage();
                 }
+
                 foreach (var error in result.Errors)
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
+                
+                    ModelState.AddModelError(string.Empty,error.Description);
+                
+               
                 }
-            }
-            Options = _db.Roles.Select(a =>
-                                  new SelectListItem
-                                  {
-                                      Value = a.Id.ToString(),
-                                      Text = a.Name
-                                  }).ToList();
 
-            // If we got this far, something failed, redisplay form
-            return Page();
+              
+              
+            }
+          
+                      
+             StatusMessage = "Error: Une erreur s'est produit, veuillez réessayer.";
+
+           
+            return RedirectToPage();
         }
     }
 }

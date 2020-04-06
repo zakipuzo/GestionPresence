@@ -28,6 +28,8 @@ namespace gestionpresence.Areas.Identity.Pages.Account
         private readonly RoleManager<IdentityRole> _roleManager;
         private  ApplicationDbContext _db;
 
+        public List<SelectListItem> rolesoptions;
+
         public FirstAccountModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
@@ -41,6 +43,13 @@ namespace gestionpresence.Areas.Identity.Pages.Account
             _logger = logger;
             _roleManager = roleManager;
             _db = db;
+
+             rolesoptions=_db.Roles.Select(a =>
+                                   new SelectListItem
+                                   {
+                                       Value = a.Id.ToString(),
+                                       Text = a.Name
+                                   }).ToList();
         }
 
         [BindProperty]
