@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\aspcorezack\\gestionpresence\\gestionpresence.csproj": {}
+    "C:\\aspcorezack\\GestionPresence\\gestionpresence.csproj": {}
   },
   "projects": {
-    "C:\\aspcorezack\\gestionpresence\\gestionpresence.csproj": {
+    "C:\\aspcorezack\\GestionPresence\\gestionpresence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\aspcorezack\\gestionpresence\\gestionpresence.csproj",
+        "projectUniqueName": "C:\\aspcorezack\\GestionPresence\\gestionpresence.csproj",
         "projectName": "gestionpresence",
-        "projectPath": "C:\\aspcorezack\\gestionpresence\\gestionpresence.csproj",
+        "projectPath": "C:\\aspcorezack\\GestionPresence\\gestionpresence.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\aspcorezack\\gestionpresence\\obj\\",
+        "outputPath": "C:\\aspcorezack\\GestionPresence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
