@@ -21,20 +21,20 @@ using Microsoft.AspNetCore.Identity;
 #nullable disable
 #nullable restore
 #line 2 "C:\aspcorezack\GestionPresence\Areas\Identity\Pages\_ViewImports.cshtml"
-using gestionpresence.Areas.Identity;
+using GestionPresence.Areas.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\aspcorezack\GestionPresence\Areas\Identity\Pages\_ViewImports.cshtml"
-using gestionpresence.Areas.Identity.Pages;
+using GestionPresence.Areas.Identity.Pages;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9746f5960fe6e14c58a6b0318c7c63f38cbeec44", @"/Areas/Identity/Pages/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6b0fd3193d998c264dea52f73e2c97f1bd713953", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"da81dc767577bf87d614a8491e3659cc1af9a239", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Error : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #pragma warning disable 1998

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace gestionpresence.Pages
+namespace GestionPresence.Pages
 {
     [Authorize]
     public class PrivacyModel : PageModel

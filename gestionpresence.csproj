@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-gestionpresence-2BDEF3FA-9F17-4D77-9D0A-95331FAB139A</UserSecretsId>
+    <UserSecretsId>aspnet-GestionPresence-2BDEF3FA-9F17-4D77-9D0A-95331FAB139A</UserSecretsId>
   </PropertyGroup>
 
 

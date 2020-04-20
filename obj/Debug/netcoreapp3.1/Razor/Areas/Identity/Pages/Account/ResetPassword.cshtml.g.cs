@@ -21,28 +21,28 @@ using Microsoft.AspNetCore.Identity;
 #nullable disable
 #nullable restore
 #line 2 "C:\aspcorezack\GestionPresence\Areas\Identity\Pages\_ViewImports.cshtml"
-using gestionpresence.Areas.Identity;
+using GestionPresence.Areas.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\aspcorezack\GestionPresence\Areas\Identity\Pages\_ViewImports.cshtml"
-using gestionpresence.Areas.Identity.Pages;
+using GestionPresence.Areas.Identity.Pages;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 1 "C:\aspcorezack\GestionPresence\Areas\Identity\Pages\Account\_ViewImports.cshtml"
-using gestionpresence.Areas.Identity.Pages.Account;
+using GestionPresence.Areas.Identity.Pages.Account;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"20a9e5039569faa81ef14499b85858323a265d44", @"/Areas/Identity/Pages/Account/ResetPassword.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6b0fd3193d998c264dea52f73e2c97f1bd713953", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ec257cf42e3462fad61fd9f8b58aa343146aca41", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"da81dc767577bf87d614a8491e3659cc1af9a239", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ab930695f47507b4d0e70e59a904ea7430a7b9d2", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account_ResetPassword : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("text-danger"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

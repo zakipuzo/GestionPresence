@@ -8617,11 +8617,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\aspcorezack\\gestionpresence\\gestionpresence.csproj",
-      "projectName": "gestionpresence",
-      "projectPath": "C:\\aspcorezack\\gestionpresence\\gestionpresence.csproj",
+      "projectUniqueName": "C:\\aspcorezack\\GestionPresence\\GestionPresence.csproj",
+      "projectName": "GestionPresence",
+      "projectPath": "C:\\aspcorezack\\GestionPresence\\GestionPresence.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\aspcorezack\\gestionpresence\\obj\\",
+      "outputPath": "C:\\aspcorezack\\GestionPresence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

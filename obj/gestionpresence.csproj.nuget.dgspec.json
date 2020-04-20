@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\aspcorezack\\GestionPresence\\gestionpresence.csproj": {}
+    "C:\\aspcorezack\\GestionPresence\\GestionPresence.csproj": {}
   },
   "projects": {
-    "C:\\aspcorezack\\GestionPresence\\gestionpresence.csproj": {
+    "C:\\aspcorezack\\GestionPresence\\GestionPresence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\aspcorezack\\GestionPresence\\gestionpresence.csproj",
-        "projectName": "gestionpresence",
-        "projectPath": "C:\\aspcorezack\\GestionPresence\\gestionpresence.csproj",
+        "projectUniqueName": "C:\\aspcorezack\\GestionPresence\\GestionPresence.csproj",
+        "projectName": "GestionPresence",
+        "projectPath": "C:\\aspcorezack\\GestionPresence\\GestionPresence.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
         "outputPath": "C:\\aspcorezack\\GestionPresence\\obj\\",
         "projectStyle": "PackageReference",

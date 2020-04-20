@@ -1,10 +1,10 @@
-namespace gestionpresence.Models
+namespace GestionPresence.Models
 {
     public static class UsersRoles
     {
-        public const string AdminUser = "Admin";
-        public const string EtudUser = "Etudiant";
-        public const string ProfUser = "Professeur";
+        public const string Admin = "Admin";
+        public const string Etud = "Etudiant";
+        public const string Prof = "Professeur";
 
     }
 }

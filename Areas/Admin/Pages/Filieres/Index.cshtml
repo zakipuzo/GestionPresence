@@ -1,0 +1,45 @@
+@page
+@model gestionpresence.Areas.Admin.Filieres.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create"  asp-route-id="@Model.idniveau">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+           
+            <th>
+                Filière
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Filiere) {
+        <tr>
+         
+            <td>@item.Libelle
+
+
+                
+            </td>
+            <td> <a  asp-area="Admin" asp-page="/Groupes/Index" asp-route-id="@item.ID">Groupes</a> | 
+             <a  asp-area="Admin" asp-page="/FiliereMatieres/Index" asp-route-id="@item.ID">Matières</a>
+   
+   </td>
+
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> | 
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

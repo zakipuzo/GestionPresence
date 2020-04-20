@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace gestionpresence.Pages
+namespace GestionPresence.Pages
 {
     public class IndexModel : PageModel
     {
@@ -17,8 +17,10 @@ namespace gestionpresence.Pages
             _logger = logger;
         }
 
+        public List<Models.Niveau> niveaux;
         public void OnGet()
         {
+                
 
         }
     }

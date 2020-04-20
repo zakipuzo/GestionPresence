@@ -1,0 +1,58 @@
+@page
+@model gestionpresence.Areas.Admin.Pages.Seances.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Seance</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Seance.DateSeance" class="control-label"></label>
+                <input asp-for="Seance.DateSeance" class="form-control" />
+                <span asp-validation-for="Seance.DateSeance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Seance.durree" class="control-label"></label>
+               
+          <select asp-for="Seance.durree" class ="form-control" asp-items="ViewBag.durree">
+
+              <option value="60" >1h</option>
+              <option value="90" >1h 30min</option>
+              <option value="120" >2h</option>
+              <option value="150" >2h 30min</option>
+               <option value="190" >3h</option>
+          </select>
+                <span asp-validation-for="Seance.durree" class="text-danger"></span>
+            </div>
+            
+                <input asp-for="Seance.GroupeId" class ="form-control" value="@Model.groupeId" hidden />
+          
+            <div class="form-group">
+                <label asp-for="Seance.SalleId" class="control-label"></label>
+                <select asp-for="Seance.SalleId" class ="form-control" asp-items="ViewBag.SalleId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Seance.FiliereMatiereId" class="control-label"></label>
+                <select asp-for="Seance.FiliereMatiereId" class ="form-control" asp-items="ViewBag.FiliereMatiereId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

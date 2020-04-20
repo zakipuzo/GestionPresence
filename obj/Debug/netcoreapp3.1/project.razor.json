@@ -20546,8 +20546,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Presences\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Presences\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Lockout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Utilisateurs\\AddUsers.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Utilisateurs\\AddUsers.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\FiliereMatieres\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\FiliereMatieres\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Sites\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Sites\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Niveaux\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Niveaux\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20571,6 +20596,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Presences\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Presences\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
       "FileKind": "mvc"
@@ -20578,6 +20608,16 @@
     {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Users\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Areas\\Admin\\Pages\\Users\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\AnneesUniversitaires\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\AnneesUniversitaires\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Groupes\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Groupes\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20596,13 +20636,43 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\AnneesUniversitaires\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\AnneesUniversitaires\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Matieres\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Matieres\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Matieres\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Matieres\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Groupes\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Groupes\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Admin\\Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\FiliereMatieres\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\FiliereMatieres\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Seances\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Seances\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20616,6 +20686,21 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Presences\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Presences\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\AnneesUniversitaires\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\AnneesUniversitaires\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\FiliereMatieres\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\FiliereMatieres\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
       "FileKind": "mvc"
@@ -20623,6 +20708,21 @@
     {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Pages\\Index.cshtml",
       "TargetPath": "Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Utilisateurs\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Utilisateurs\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Presences\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Presences\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Filieres\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Filieres\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20656,6 +20756,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Utilisateurs\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Utilisateurs\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -20663,6 +20768,16 @@
     {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Niveaux\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Niveaux\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Filieres\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Filieres\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20681,13 +20796,78 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Seances\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Seances\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Matieres\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Matieres\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\FiliereMatieres\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\FiliereMatieres\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\AnneesUniversitaires\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\AnneesUniversitaires\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Sites\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Sites\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Sites\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Sites\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Salles\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Salles\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Salles\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Salles\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Niveaux\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Niveaux\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Error.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Salles\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Salles\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Seances\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Seances\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Pages\\soso.cshtml",
+      "TargetPath": "Pages\\soso.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Pages\\Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Niveaux\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Niveaux\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20701,13 +20881,38 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Seances\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Seances\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Matieres\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Matieres\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Groupes\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Groupes\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Pages\\Shared\\_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Utilisateurs\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Utilisateurs\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Salles\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Salles\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20721,6 +20926,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Filieres\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Filieres\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -20731,13 +20946,58 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Groupes\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Groupes\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Inscriptions\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Inscriptions\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Filieres\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Filieres\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\AnneesUniversitaires\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\AnneesUniversitaires\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Inscriptions\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Inscriptions\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Users\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Admin\\Pages\\Users\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Sites\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Sites\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Utilisateurs\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Utilisateurs\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Matieres\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Matieres\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\FiliereMatieres\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\FiliereMatieres\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20756,8 +21016,33 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Salles\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Salles\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Filieres\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Filieres\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Groupes\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Groupes\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Presences\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Presences\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Seances\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Seances\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20771,6 +21056,31 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Utilisateurs\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Utilisateurs\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Filieres\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Filieres\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Inscriptions\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Inscriptions\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Inscriptions\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Inscriptions\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Presences\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Presences\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
       "FileKind": "mvc"
@@ -20781,8 +21091,63 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Utilisateurs\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Utilisateurs\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Groupes\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Groupes\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Matieres\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Matieres\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\FiliereMatieres\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\FiliereMatieres\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Inscriptions\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Inscriptions\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ForgotPasswordConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Pages\\Entrer.cshtml",
+      "TargetPath": "Pages\\Entrer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Sites\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Sites\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Niveaux\\Details.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Niveaux\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\AnneesUniversitaires\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\AnneesUniversitaires\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Niveaux\\Create.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Niveaux\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Seances\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Seances\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20798,6 +21163,26 @@
     {
       "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Identity\\Pages\\Account\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Inscriptions\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Inscriptions\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Salles\\Delete.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Salles\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Utilisateurs\\_StatusMessage.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Utilisateurs\\_StatusMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\aspcorezack\\GestionPresence\\Areas\\Admin\\Pages\\Sites\\Index.cshtml",
+      "TargetPath": "Areas\\Admin\\Pages\\Sites\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

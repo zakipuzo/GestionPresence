@@ -1,0 +1,61 @@
+@page
+@model gestionpresence.Areas.Admin.Pages.Seances.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Seance de </h1>
+
+<p>
+    <a asp-page="Create" asp-route-id="@Model.groupeid">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].DateSeance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].durree)
+            </th>
+          
+            <th>
+                @Html.DisplayNameFor(model => model.Seance[0].Salle)
+            </th>
+            <th>
+               Matière
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Seance) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateSeance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.durree)
+            </td>
+           
+            <td>
+                 @item.Salle.Libelle - @item.Salle.EcoleSite.Libelle
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiliereMatiere.Matiere.Libelle)
+            </td>
+
+            <td>
+               <a  asp-area="Admin" asp-page="/Presences/Index" asp-route-id="@item.ID"> Présences</a>
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

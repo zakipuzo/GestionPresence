@@ -1,5 +1,5 @@
 using System;
-using gestionpresence.Data;
+using GestionPresence.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -7,8 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: HostingStartup(typeof(gestionpresence.Areas.Identity.IdentityHostingStartup))]
-namespace gestionpresence.Areas.Identity
+[assembly: HostingStartup(typeof(GestionPresence.Areas.Identity.IdentityHostingStartup))]
+namespace GestionPresence.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {

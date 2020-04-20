@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 
-namespace gestionpresence.Models
+namespace GestionPresence.Models
 {
     public class AppUser: IdentityUser
     {

@@ -21,36 +21,36 @@ using Microsoft.AspNetCore.Identity;
 #nullable disable
 #nullable restore
 #line 2 "C:\aspcorezack\GestionPresence\Areas\Identity\Pages\_ViewImports.cshtml"
-using gestionpresence.Areas.Identity;
+using GestionPresence.Areas.Identity;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 3 "C:\aspcorezack\GestionPresence\Areas\Identity\Pages\_ViewImports.cshtml"
-using gestionpresence.Areas.Identity.Pages;
+using GestionPresence.Areas.Identity.Pages;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 1 "C:\aspcorezack\GestionPresence\Areas\Identity\Pages\Account\_ViewImports.cshtml"
-using gestionpresence.Areas.Identity.Pages.Account;
+using GestionPresence.Areas.Identity.Pages.Account;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 1 "C:\aspcorezack\GestionPresence\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml"
-using gestionpresence.Areas.Identity.Pages.Account.Manage;
+using GestionPresence.Areas.Identity.Pages.Account.Manage;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3921129b1ce260a3757fc538b3c7322da945c1e6", @"/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6b0fd3193d998c264dea52f73e2c97f1bd713953", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ec257cf42e3462fad61fd9f8b58aa343146aca41", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b233b025d7d33981525976677c1568b5c7b285f6", @"/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"da81dc767577bf87d614a8491e3659cc1af9a239", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ab930695f47507b4d0e70e59a904ea7430a7b9d2", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a8538ebdb5b562cbc37b9f366399cf9c6c8a6f69", @"/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account_Manage_TwoFactorAuthentication : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("name", "_StatusMessage", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

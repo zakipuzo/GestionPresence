@@ -13,13 +13,13 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
-using gestionpresence.Data;
-using gestionpresence.Models;
+using GestionPresence.Data;
+using GestionPresence.Models;
 
-namespace gestionpresence.Areas.Admin.Pages.Users
+namespace GestionPresence.Areas.Admin.Pages.Users
 {
     
-    [Authorize (Roles=UsersRoles.AdminUser)]
+    [Authorize (Roles=UsersRoles.Admin)]
     public class AddUsersModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
@@ -107,18 +107,18 @@ namespace gestionpresence.Areas.Admin.Pages.Users
         {
 
             //zack
-            if (!await _roleManager.RoleExistsAsync(UserRoles.Admin))
+            if (!await _roleManager.RoleExistsAsync(UsersRoles.Admin))
             {
-                await _roleManager.CreateAsync(new IdentityRole(UserRoles.Admin));
+                await _roleManager.CreateAsync(new IdentityRole(UsersRoles.Admin));
             }
-            if (!await _roleManager.RoleExistsAsync(UserRoles.Prof))
+            if (!await _roleManager.RoleExistsAsync(UsersRoles.Prof))
             {
-                await _roleManager.CreateAsync(new IdentityRole(UserRoles.Prof));
+                await _roleManager.CreateAsync(new IdentityRole(UsersRoles.Prof));
             }
 
-            if (!await _roleManager.RoleExistsAsync(UserRoles.Etud))
+            if (!await _roleManager.RoleExistsAsync(UsersRoles.Etud))
             {
-                await _roleManager.CreateAsync(new IdentityRole(UserRoles.Etud));
+                await _roleManager.CreateAsync(new IdentityRole(UsersRoles.Etud));
             }
 
 
