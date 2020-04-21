@@ -9,6 +9,8 @@ sélectionner la base de donné projet_gestionpresencedb puis Importer le fichie
 
 ouvrez le terminal et tapez la commande suivante :
 
+ -----> cd GestionPresence
+ 
  -----> dotnet watch run
  
 Compte Admin:
