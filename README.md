@@ -1,11 +1,17 @@
-# GestionPresence
+# Gestion des Présences
 
+Gestion des présences des séances d'une école et simulation de pointage des étudiants par leurs cartes RFID
+ 
+# En cas d'utilisation du script de la base données:
 
+Créer une nouvelle base de donnée nommé **projet_gestionpresencedb** sur MySQL. 
+sélectionner la base de donné projet_gestionpresencedb puis Importer le fichier **projet_gestionpresencedb.sql**
 
-Première utilisation
-En cas d'utilisation du script de la base de données
+ouvrez le terminal et tapez la commande suivante :
 
-Compte Admin
+ -----> dotnet watch run
+ 
+Compte Admin:
 Nom d'utilisateur (Email) : admin@admin.com
 Mot de Passe : Admin$123
 
@@ -13,20 +19,20 @@ Compte Professeur
 Nom d'utilisateur (Email) : y@y.y
 Mot de Passe : Yy$123
 
-Pour les autres comptes, les Mot de passe commence par la première lettre de l'email
+ 
+Pour les autres comptes, les mot de passe commence par la première lettre de l'email
 Exemple: Email : c@c.c
 Mot de passe : Cc$123
 
-En Cas de la création de migration:
+# Si vous n'utiliser pas le script .sql
+ouvrez terminal et tapez les commandes suivantes :
 
-Une page s'ouvrira pour l'ajout d'un compte Admin et l'ajout d'une année universitaire.
-
-
-Ce projet est réalisé par:
-
-Zakaria Aarab,
-Abdelbasset Essordi,
-Oussama Idrissi,
-Youssef Jouaiti
+ -----> cd GestionPresence
+ 
+-----> dotnet ef migrations add CreateDb
+ 
+ ----->dotnet ef database update 
+ 
+Une page s'ouvrira pour l'ajout d'un compte Administrateur et l'ajout d'une année universitaire est obligatoire.
 
 
