@@ -17,16 +17,16 @@ Pour les autres comptes, les Mot de passe commence par la première lettre de l'
 Exemple: Email : c@c.c
 Mot de passe : Cc$123
 
-En Cas de la création de migration
+En Cas de la création de migration:
 
 Une page s'ouvrira pour l'ajout d'un compte Admin et l'ajout d'une année universitaire.
 
-Réalisation
+
 Ce projet est réalisé par:
 
-Zakaria Aarab
-Abdelbasset Essordi
-Oussama Idrissi
+Zakaria Aarab,
+Abdelbasset Essordi,
+Oussama Idrissi,
 Youssef Jouaiti
 
 
