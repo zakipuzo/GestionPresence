@@ -33,8 +33,8 @@
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Input.RoleId"></label>
-                <select id="roles" asp-for="Input.RoleId" asp-items="Model.rolesoptions" class="form-controle"></select>
+                <label >Role</label><br>
+                <select style="width:100%" id="roles" asp-for="Input.RoleId" asp-items="Model.rolesoptions" class="form-controle"></select>
                 <span asp-validation-for="Input.RoleId" class="text-danger"></span>
             </div>
             <div   class="form-group rfidsection">

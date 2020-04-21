@@ -1,5 +1,5 @@
 @page
-@inject UserManager<IdentityUser> UserManager
+@inject Data.ApplicationDbContext _db
 @model gestionpresence.Areas.Admin.Pages.Utilisateurs.IndexModel
 
 @{
@@ -50,10 +50,19 @@
             </td>
 
             <td>
-               @UserManager.GetRolesAsync(item)
+               @{var roles=(from x in _db.Roles join y in _db.UserRoles on x.Id equals y.RoleId join
+               i in _db.Users on y.UserId equals i.Id where i.Id== item.Id select new {
+                   rolename=x.Name
+               }
+               ).ToList(); }
+               @foreach (var role in roles)
+               {
+                   @role.rolename
+                  
+               }
                   
             </td>
-           
+          
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
