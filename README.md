@@ -1,4 +1,4 @@
-# Gestion des Présences
+# Gestion des Présences et Pointage des Etudiants
 
 Gestion des présences des séances d'une école et simulation de pointage des étudiants par leurs cartes RFID
  
