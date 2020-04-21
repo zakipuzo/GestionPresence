@@ -64,6 +64,11 @@ namespace GestionPresence
             
                 endpoints.MapRazorPages();
             });
+
+            
+
+
+
         }
     }
 }

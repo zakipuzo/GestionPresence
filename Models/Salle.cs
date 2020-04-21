@@ -9,7 +9,7 @@ namespace GestionPresence.Models
           [Key]
         public int ID { get; set; }
             [Required]
-        [Display(Name = "Libeelle")]
+        [Display(Name = "Libellé")]
 
        public string Libelle { get; set; }
 
@@ -22,7 +22,7 @@ namespace GestionPresence.Models
 
 
         [Required]
-        [Display(Name = "EcoleSite")]
+        [Display(Name = "Site")]
         public int EcoleSiteId { get; set; }
 
         [ForeignKey("EcoleSiteId")]

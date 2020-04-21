@@ -9,6 +9,8 @@
 
 <h4>AnneeUniversitaire</h4>
 <hr />
+
+<p class="text-danger">@Model.statusmsg</p>
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -21,7 +23,7 @@
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="AnneeUniversitaire.AnneeCourante" /> @Html.DisplayNameFor(model => model.AnneeUniversitaire.AnneeCourante)
+                    <input id="anneecheck" class="form-check-input" asp-for="AnneeUniversitaire.AnneeCourante" /> @Html.DisplayNameFor(model => model.AnneeUniversitaire.AnneeCourante)
                 </label>
             </div>
             <div class="form-group">
@@ -32,9 +34,18 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">Retour à la liste</a>
 </div>
 
 @section Scripts {
+
+    <script>
+
+    $(document).ready(function(){
+      if ($('#anneecheck').is(':checked')) {
+          $('#anneecheck').attr("disabled", true);} });
+      </script>
+
+   
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

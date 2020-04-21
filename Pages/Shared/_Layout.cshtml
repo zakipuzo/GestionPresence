@@ -10,14 +10,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] Gestion des présence</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/fontawsome.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.9.0/bootstrap-table.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" />
+   
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="~/img/logo.png" width="150"/></a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="~/img/logo.png" width="50"/></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -26,32 +28,40 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Acceuil</a>
                         </li>
 
                         @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
                         {
-                                <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Nouveau Utilisateur</a>
-                        </li>
+                               
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register"></a>
+                            <a class="nav-link text-dark" asp-area="Admin" asp-page="/Home/Index">Tableau de bord</a>
                         </li>
+         <li class="nav-item">
+                           
+                            <a  class="nav-link text-dark" asp-area="Presences" asp-page="/Index">Présences</a>
+                        </li>
+
+                        
                           <!-- Dropdown -->
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Filières
+      <a class="nav-link text-dark dropdown-toggle"  id="navbardrop" data-toggle="dropdown">
+        Gérer
       </a>
       <div class="dropdown-menu">
-       <a class="dropdown-item" asp-area="Admin" asp-page="/Filieres">Nouveau Utilisateur</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
+       <a class="dropdown-item" asp-area="Admin" asp-page="/AnneesUniversitaires/Index">Années Universitaires</a>
+       <a  class="dropdown-item" class="anneeuLink" asp-area="Admin" asp-page="/Niveaux/Index">Niveaux</a>
+        <a  class="dropdown-item" class="anneeuLink" asp-area="Admin" asp-page="/Matieres/Index">Matières</a>
+         <a  class="dropdown-item" class="anneeuLink" asp-area="Admin" asp-page="/Utilisateurs/Index">Utilisateurs</a>
+         <a class="dropdown-item" asp-area="Admin" asp-page="/Sites/Index">Sites</a>
+       <a  class="dropdown-item" class="anneeuLink" asp-area="Admin" asp-page="/Salles/Index">Salles</a>
+         
       </div>
     </li>
+     
+      
                             }
-                         <!-- <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>-->
+                     
 
                         
                             
@@ -61,13 +71,16 @@
         </nav>
     </header>
     <div class="container">
-        @{
-                
-        var Anneecourante= _db.AnneeUniversitaires.Where(x=>x.AnneeCourante==true).FirstOrDefault();
+       
+      <div class="text-center">
+         @{var Anneecourante= _db.AnneeUniversitaires.Where(x=>x.AnneeCourante==true).FirstOrDefault();
         if(Anneecourante!=null){
-       <a asp-area="Admin" asp-page="/AnneesUniversitaires/Index">@Anneecourante.AnneeString()</a>
-        }
-        }
+        <h4 style="text-decoration:underline">Gestion des présences @Anneecourante.AnneeString()</h4>
+             }
+           }
+      </div>  
+        
+       
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -75,15 +88,47 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020  <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; 2020  Gestion des présences
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
    
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/fontawsome.js" asp-append-version="true"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+          var table = $('#mytable').DataTable({
+
+                autoWidth: false,
+                scrollX: true,
+                language: {
+                    processing: "Traitement en cours...",
+                    search: "Rechercher&nbsp;:",
+                    lengthMenu: "Afficher _MENU_ &eacute;l&eacute;ments",
+                    info: "Affichage de l'&eacute;lement _START_ &agrave; _END_ sur _TOTAL_ &eacute;l&eacute;ments",
+                    infoEmpty: "Affichage de l'&eacute;lement 0 &agrave; 0 sur 0 &eacute;l&eacute;ments",
+                    infoFiltered: "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+                    infoPostFix: "",
+                    loadingRecords: "Chargement en cours...",
+                    zeroRecords: "Aucun &eacute;l&eacute;ment &agrave; afficher",
+                    emptyTable: "Aucune donnée disponible dans le tableau",
+                    paginate: {
+                        first: "Premier",
+                        previous: "Pr&eacute;c&eacute;dent",
+                        next: "Suivant",
+                        last: "Dernier"
+                    },
+                    aria: {
+                        sortAscending: ": activer pour trier la colonne par ordre croissant",
+                        sortDescending: ": activer pour trier la colonne par ordre décroissant"
+                    }
+                }
+            });
+
+    </script>
 
     @RenderSection("Scripts", required: false)
 </body>

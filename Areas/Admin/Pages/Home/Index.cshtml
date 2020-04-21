@@ -1,0 +1,56 @@
+﻿@page
+@model gestionpresence.Areas.Admin.Home.Pages.IndexModel
+@{
+
+   
+}
+
+
+
+<div class="container text-center dashbordbuttons"> 
+     <div class="row">
+ 
+        <div class="col-md-4">
+                <a class="btn adminbuttons" asp-area="Admin" asp-page="/AnneesUniversitaires/Index">Années Universitaires</a>
+                    
+        </div>
+        <div class="col-md-4">
+                <a class="btn adminbuttons" asp-area="Admin" asp-page="/Niveaux/Index">Niveaux</a>
+          
+        </div> 
+        <div class="col-md-4">
+                <a class="btn adminbuttons" asp-area="Admin" asp-page="/Matieres/Index">Matières
+                
+                </a>          
+        </div>
+
+     </div>
+
+     <div class="row">
+        <div class="col-md-6">
+                <a class="btn adminbuttons" asp-area="Admin" asp-page="/Salles/Index">Salles</a>
+          
+        </div>
+             
+         <div class="col-md-6">
+                <a class="btn adminbuttons" asp-area="Admin" asp-page="/Sites/Index">Sites
+                
+                </a> 
+         </div>      
+                
+
+     </div>
+     <div class="row">
+                            
+                 <div class="col-md-6">
+                <a class="btn adminbuttons" asp-area="Admin" asp-page="/Utilisateurs/Index">Utilisateurs
+                
+                </a>    
+               </div>  
+               <div class="col-md-6">
+                <a class="btn adminbuttons" asp-area="Presences" asp-page="/Index">Présences
+                
+                </a>    
+               </div> 
+                
+</div>

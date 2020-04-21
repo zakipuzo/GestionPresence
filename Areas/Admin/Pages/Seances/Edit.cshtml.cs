@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Pages.Seances
 {
+     [Authorize (Roles=UsersRoles.Admin)]
     public class EditModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
@@ -23,12 +25,18 @@ namespace gestionpresence.Areas.Admin.Pages.Seances
         [BindProperty]
         public Seance Seance { get; set; }
 
+        public int groupeId;
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
+
+             groupeId=(int)id;
+
+            var groupe=_context.Groupes.Where(x=>x.ID==groupeId).FirstOrDefault();
 
             Seance = await _context.Seances
                 .Include(s => s.FiliereMatiere)
@@ -39,7 +47,18 @@ namespace gestionpresence.Areas.Admin.Pages.Seances
             {
                 return NotFound();
             }
-           ViewData["FiliereMatiereId"] = new SelectList(_context.FiliereMatieres, "ID", "ProfId");
+            var matieres=(from x in _context.FiliereMatieres join  y in _context.Matieres
+            on x.MatiereId equals y.ID
+            where x.FiliereId==groupe.FiliereId
+            select new{
+                ID=x.ID,
+                NomMat=y.Libelle
+            }).ToList();
+
+           
+            
+        ViewData["FiliereMatiereId"] = new SelectList(matieres, "ID", "NomMat");
+
            ViewData["GroupeId"] = new SelectList(_context.Groupes, "ID", "ID");
            ViewData["SalleId"] = new SelectList(_context.Salles, "ID", "CodePointeur");
             return Page();
@@ -72,7 +91,7 @@ namespace gestionpresence.Areas.Admin.Pages.Seances
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Index",new {id=Seance.GroupeId});
         }
 
         private bool SeanceExists(int id)

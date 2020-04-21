@@ -1,0 +1,62 @@
+﻿
+
+@page
+@using Microsoft.AspNetCore.Identity
+@inject GestionPresence.Data.ApplicationDbContext _db
+
+@model GestionPresence.Areas.Presences.Pages.SeancesModel
+
+@{
+    ViewData["Title"] = "Seances";
+}
+
+
+<h1> Seances</h1>
+
+@if(Model.taux!=-1){
+
+<h2 class="text-danger">taux d'absence<b> @Model.taux %</b></h2>
+}
+<hr>
+
+<div>
+@if(@Model.seances.Count()==0){
+    <p>Aucune Seance</p>
+}
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Date
+            </th>
+            <th>Salle</th>   
+          <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.seances) {
+
+    
+   
+        <tr>
+            <td>
+              
+            @item.DateSeance
+
+            </td>
+              <td>
+               
+              @item.Salle.Libelle (@item.Salle.EcoleSite.Libelle)
+            </td>
+            <td><a asp-page="./Details" asp-route-id="@item.ID">Présences</a></td>
+
+          
+        </tr>
+
+     
+       
+}
+    </tbody>
+</table>

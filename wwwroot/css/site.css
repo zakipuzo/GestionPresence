@@ -69,3 +69,75 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+.dashbordbuttons {
+  width: max-content;
+
+}
+
+ .col-md-4 , .col-md-6{
+   display: inline-block;
+    margin-top: 20px;
+}
+.adminbuttons{
+  background-color: #343a40;
+    color: white;
+   
+    font-weight: bold;
+    width: 150px;
+    height: 100px;
+border: none;
+display: inline-block;
+  vertical-align: middle;
+    
+}
+
+.infos{
+  background-color: #f1fffd;
+}
+
+.jumbotron{
+  padding: 0rem 0rem;
+
+  background-color: #6ca497;
+  border-radius: .3rem;
+  color: white;
+}
+a{
+  color:#1bb62e;
+}
+.conceptionimg{
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
+}
+
+ul{
+  list-style-type: none;
+}
+.entrerlink{
+  margin-top: 40px;
+  margin-top: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #1861ac;
+}
+.bigbutton{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.compteinfos{
+  font-weight: bold;
+}
+.entrer{
+  margin-top:100px;
+  background-color: green;
+  height: 4em;
+}
+
+.adminbuttons:hover{
+  background-color: #dc3545;
+  color: white;
+
+}

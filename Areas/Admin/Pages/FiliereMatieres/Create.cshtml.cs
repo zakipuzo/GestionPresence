@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Pages.FiliereMatieres
 {
-    public class CreateModel : PageModel
+    [Authorize (Roles=UsersRoles.Admin)]
+        public class CreateModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
 
@@ -33,8 +35,20 @@ namespace gestionpresence.Areas.Admin.Pages.FiliereMatieres
             
             idfiliere=id;
 
+              var professeurs=   (from x in _context.AppUSers join y in _context.UserRoles
+        on x.Id equals y.UserId 
+        join v in _context.Roles
+        on y.RoleId equals v.Id
+        where v.Name==UsersRoles.Prof
+        select new {
+            Id=x.Id,
+            Nom= x.Nom+" "+x.Prenom
+        }
+        
+        ).ToList();
+
         ViewData["MatiereId"] = new SelectList(_context.Matieres, "ID", "Libelle");
-        ViewData["ProfId"] = new SelectList(_context.AppUSers, "Id","Nom");
+        ViewData["ProfId"] = new SelectList(professeurs, "Id","Nom");
             return Page();
         }
 

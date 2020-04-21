@@ -1,0 +1,72 @@
+﻿
+
+@page
+@using Microsoft.AspNetCore.Identity
+@inject GestionPresence.Data.ApplicationDbContext _db
+
+@model GestionPresence.Areas.Presences.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+ <a  asp-area="Admin" asp-page="/Niveaux/Index">niveaux</a>
+
+
+<h1> Matières</h1>
+
+<hr>
+
+<div>
+@if(@Model.Filieresmatieres.Count()==0){
+    <p>Aucune matière</p>
+}
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Libellé
+            </th>
+            <th>Groupes</th>   
+            @if(User.IsInRole("Admin")){
+                 <th>Professeur</th>
+            }
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Filieresmatieres) {
+   
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matiere.Libelle)
+
+                
+            </td>
+
+              <td>
+               
+               @{   
+                   var groupes=_db.Groupes.Where(x=>x.FiliereId==item.Filiere.ID).ToList();
+               }
+               @foreach (var gr in groupes)
+               {
+               
+                   <p> <a asp-page="./Seances" asp-route-idg="@gr.ID" asp-route-idfm="@item.ID">@item.Filiere.Niveau.Numero @item.Filiere.Libelle @gr.Numero </a></p> 
+               }
+            </td>
+
+             @if(User.IsInRole("Admin")){
+                 <td>
+                     @item.Prof.Nom @item.Prof.Prenom
+                 </td>
+      
+            }
+          
+        </tr>
+       
+}
+    </tbody>
+</table>

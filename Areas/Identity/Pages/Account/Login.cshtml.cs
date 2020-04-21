@@ -108,7 +108,18 @@ namespace GestionPresence.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl = returnUrl ?? Url.Content("~/");
+             returnUrl = returnUrl ?? Url.Content("~/");
+
+           if( _signInManager.IsSignedIn(User) && User.IsInRole("Admin")){
+                    returnUrl = returnUrl ?? Url.Content("~/Admin/Home");
+           }else if(_signInManager.IsSignedIn(User) && User.IsInRole("Etudiant")){
+                returnUrl = returnUrl ?? Url.Content("~/Etudiants/presences");
+
+           }else if(_signInManager.IsSignedIn(User) && User.IsInRole("Professeur")){
+                returnUrl = returnUrl ?? Url.Content("~/Professeurs/matieres/");
+
+           }
+            
 
             if (ModelState.IsValid)
             {
@@ -117,6 +128,7 @@ namespace GestionPresence.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }

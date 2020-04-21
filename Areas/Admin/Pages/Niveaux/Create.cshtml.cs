@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using GestionPresence.Data;
 using GestionPresence.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Niveaux
 {
+     [Authorize (Roles=UsersRoles.Admin)]
     public class CreateModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
@@ -25,6 +27,9 @@ namespace gestionpresence.Areas.Admin.Niveaux
 
          [BindProperty]
         public Niveau Niveau { get; set; }
+
+
+        ///param id annee scolaire
         public IActionResult OnGet(int? id)
         {
 
@@ -62,11 +67,12 @@ namespace gestionpresence.Areas.Admin.Niveaux
                  var result= await _context.Niveaux.AddAsync(Niveau);  
                  await _context.SaveChangesAsync();
                    AnneUId=_context.AnneeUniversitaires.Where(x=>x.AnneeCourante==true).FirstOrDefault().ID;
-                   return RedirectToPage("./Index");
+                
+                   return RedirectToPage("./Index",new {id=Niveau.AnneeUniversitaireId});
             }
             catch( DbUpdateException e){
-
-                  AnneUId=_context.AnneeUniversitaires.Where(x=>x.AnneeCourante==true).FirstOrDefault().ID;
+                
+                AnneUId=_context.AnneeUniversitaires.Where(x=>x.AnneeCourante==true).FirstOrDefault().ID;
 
                 ErrorMessage="Niveau déjà existant";
                 

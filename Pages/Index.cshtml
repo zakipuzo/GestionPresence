@@ -1,32 +1,116 @@
-﻿@page
+﻿
+@page
+@inject SignInManager<IdentityUser> SignInManager
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Présence";
 }
-
+ 
 <div class="text-center">
-    <h1 class="display-4"></h1>
-    <p>Welcome !</p>
+    
 </div>
-
-
+ 
 <div class="container">
-
-    <div class="row">
-
-        <div class="col-md-4">
-                <a class="" asp-area="Admin" asp-page="/AnneesUniversitaires/Index">Années Universitaires</a>
-                      
-
-        </div>
-          <div class="col-md-4">
-                <a class="" asp-area="Admin" asp-page="/Niveaux/Index">Niveaux</a>
-                      
-        </div>
-        
+ <div class="row text-center">
+     <style>
+         
+     </style>
+  @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin")){
 
         
-        </div>
-    </div>
+
+            <div class="col-md-6 ">
+                 <h3 class="bigbutton"><a  asp-area="Admin" asp-page="/Home/Index">Tableau de bord</a></h3>
+            </div>
+
+        <div class="col-md-6 ">
+                  <h3 class="bigbutton"><a  asp-area="Presences" asp-page="/Index">Présences</a></h3> 
+            </div>
+
+  }
+  else if (SignInManager.IsSignedIn(User) && User.IsInRole("Professeur")  ){
+
+            <div class="col-md-6 ">
+                 <h3 class="bigbutton"> <a  asp-area="Presences" asp-page="/Index">Présences</a></h3>
+            </div>
+                
+
+  }
+  </div>
+
+  <hr>
+
+  <div class="row" class="entrer" style="">
+<div class="col-md-12">  
+
+   
+    <p><a class="entrerlink"  asp-page="/Entrer">Cliquez ici pour valider votre présence</a></p>
+    
 </div>
 
+
+
+
+
+
+  </div>
+</div>
+<section class="text-center">
+<div class="jumbotron">
+    <h3>Présentation du  projet</h3>
+</div>
+
+<div class="container infos">
+    <h2>Conception</h2>
+    <img class="conceptionimg" src="~/img/conception.jpg" />
+
+    <div >
+
+    
+    <h2>Informations</h2>
+    <h3>Première utilisation</h3>
+    <p>
+        <span class="text text-danger">En cas d'utilisation du script de la base de données</span>
+    </p>
+        <p>
+            <span class="compteinfos">Compte Admin </span> <br>
+            Nom d'utilisateur (Email) :  admin@admin.com<br>
+            Mot de Passe : Admin$123
+             </p>  
+             <p>
+                
+
+                 <p>
+        <span class="text text-danger">En Cas de la création de migration</span>
+        <p>
+
+            Une page s'ouvrira pour l'ajout d'un compte <b>Admin</b> et l'ajout d'une année universitaire.
+        </p>
+
+    </p>
+    </div>       
+
+    <h2>Réalisation</h2>
+    <p>
+
+        Ce projet est réalisé par:
+    </p>
+
+    <b>
+    Zakaria Aarab<br>
+   Abdelbasset Essordi<br>
+    Oussama Idrissi<br>
+    Youssef Jouaiti<br>
+    
+    </b>
+   
+    
+    <br>
+
+    <marquee behavior="alternate" bgcolor="black">
+        <b style="color:white">Stay Safe! Stay at home ! Toguether against Covid-19 epidemic</b>
+        </marquee>
+
+</div>
+
+</section>

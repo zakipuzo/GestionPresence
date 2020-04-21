@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Filieres
 {
+     [Authorize (Roles=UsersRoles.Admin)]
     public class IndexModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;

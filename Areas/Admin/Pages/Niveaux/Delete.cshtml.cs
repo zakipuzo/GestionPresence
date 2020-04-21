@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Niveaux
 {
+     [Authorize (Roles=UsersRoles.Admin)]
     public class DeleteModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
@@ -41,20 +43,22 @@ namespace gestionpresence.Areas.Admin.Niveaux
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
+
+            int idannee;
             if (id == null)
             {
                 return NotFound();
             }
 
             Niveau = await _context.Niveaux.FindAsync(id);
-
+        idannee=Niveau.AnneeUniversitaireId;
             if (Niveau != null)
             {
                 _context.Niveaux.Remove(Niveau);
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Index",new{id=idannee});
         }
     }
 }

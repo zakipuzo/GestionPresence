@@ -40,6 +40,13 @@
                 <input asp-for="Input.ConfirmPassword" class="form-control" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label> Créer une année universitaire</label>
+                <input asp-for="AnneeU.Annee" class="form-control" />
+                <span asp-validation-for="AnneeU.Annee" class="text-danger"></span>
+            </div>
+
             <button type="submit" class="btn btn-primary">Enregistrer</button>
         </form>
     </div>

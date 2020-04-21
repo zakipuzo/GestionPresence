@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Pages.Inscriptions
 {
+     [Authorize (Roles=UsersRoles.Admin)]
     public class DeleteModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
@@ -21,6 +23,8 @@ namespace gestionpresence.Areas.Admin.Pages.Inscriptions
 
         [BindProperty]
         public Inscription Inscription { get; set; }
+
+
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -49,14 +53,15 @@ namespace gestionpresence.Areas.Admin.Pages.Inscriptions
             }
 
             Inscription = await _context.Inscriptions.FindAsync(id);
-
+var grid=Inscription.GroupeId;
             if (Inscription != null)
             {
+                
                 _context.Inscriptions.Remove(Inscription);
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Index",new {id=grid});
         }
     }
 }

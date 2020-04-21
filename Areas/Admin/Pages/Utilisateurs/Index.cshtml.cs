@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Pages.Utilisateurs
 {
+     [Authorize (Roles=UsersRoles.Admin)]
     public class IndexModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
@@ -23,7 +25,9 @@ namespace gestionpresence.Areas.Admin.Pages.Utilisateurs
 
         public async Task OnGetAsync()
         {
-            AppUser = await _context.AppUSers.ToListAsync();
+            AppUser = await _context.AppUSers
+            
+            .ToListAsync();
         }
     }
 }

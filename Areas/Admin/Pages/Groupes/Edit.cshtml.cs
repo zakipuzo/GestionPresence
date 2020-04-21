@@ -8,10 +8,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Pages.Groupes
 {
-    public class EditModel : PageModel
+     [Authorize (Roles=UsersRoles.Admin)]
+        public class EditModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
 

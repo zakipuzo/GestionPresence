@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Niveaux
 {
+     [Authorize (Roles=UsersRoles.Admin)]
     public class EditModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
@@ -23,12 +25,17 @@ namespace gestionpresence.Areas.Admin.Niveaux
         [BindProperty]
         public Niveau Niveau { get; set; }
 
+        [TempData]
+        public int anneeid{get;set;}
+
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
+
+        anneeid=(int)id;
 
             Niveau = await _context.Niveaux
                 .Include(n => n.AnneeUniversitaire).FirstOrDefaultAsync(m => m.ID == id);
@@ -49,11 +56,12 @@ namespace gestionpresence.Areas.Admin.Niveaux
             {
                 return Page();
             }
-
+            
             _context.Attach(Niveau).State = EntityState.Modified;
 
             try
             {
+                
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -68,7 +76,7 @@ namespace gestionpresence.Areas.Admin.Niveaux
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Index", new {id=anneeid});
         }
 
         private bool NiveauExists(int id)

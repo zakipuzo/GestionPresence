@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using GestionPresence.Data;
 using GestionPresence.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Pages.Inscriptions
 {
+     [Authorize (Roles=UsersRoles.Admin)]
     public class CreateModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
@@ -19,6 +21,8 @@ namespace gestionpresence.Areas.Admin.Pages.Inscriptions
         {
             _context = context;
         }
+
+        public string statusmsg;
     
         [TempData] 
         public int groupeid{get;set;}
@@ -64,12 +68,20 @@ namespace gestionpresence.Areas.Admin.Pages.Inscriptions
             {
                 return Page();
             }
+
+            try{
             Inscription.AnneeUniversitaireId=_context.AnneeUniversitaires.Where(x=>x.AnneeCourante==true)
             .FirstOrDefault().ID;
             _context.Inscriptions.Add(Inscription);
             await _context.SaveChangesAsync();
+                return RedirectToPage("./Index",new {id=Inscription.GroupeId});
+            }catch{
 
-            return RedirectToPage("./Index",new {id=groupeid});
+                    statusmsg="Etudiants Existe déja dans un autre groupe!";
+            }
+
+    return Page();
+            
         }
     }
 }

@@ -84,12 +84,12 @@ namespace GestionPresence.Pages
                                         
                                         try{
                                         _context.SaveChanges();
-                                        statusmsg="m3aaaaalem";
+                                        statusmsg="Vous êtes présent!";
                                         }
                                         catch{
-                                             statusmsg="9wdtiha";
+                                             statusmsg="Erreur!";
                                         }
-                                        
+                                            
                                         return Page();
                                     }
 
@@ -105,7 +105,7 @@ namespace GestionPresence.Pages
 
             }
 
- statusmsg="9wdtiha";
+ statusmsg="Erreur";
             return Page();
         }
     }

@@ -7,18 +7,18 @@
     string[] anneenum=new string[]{"Première","Deuxième","Troisième","Quatrième","Cinquième"};
 }
 
-<h1>Index</h1>
+<h1>Liste des Niveaux</h1>
 
 <p>
-    <a asp-page="Create" asp-route-id="@Model.idannee">Create New</a>
+    <a asp-page="Create" asp-route-id="@Model.idannee">Nouveau</a>
 </p>
-<table class="table">
+<table id="mytable" class="table">
     <thead>
         <tr>
             <th>
                 Niveaux
             </th>
-            
+            <th></th>
             <th></th>
         </tr>
     </thead>
@@ -26,11 +26,14 @@
 @foreach (var item in Model.Niveau) {
         <tr>
             <td>
+                @anneenum[item.Numero-1] année
 
-<a  asp-area="Admin" asp-page="/Filieres/Index" asp-route-id="@item.ID">@anneenum[item.Numero-1] année</a>
+
             
             </td>
-            
+            <td>
+                <a  asp-area="Admin" asp-page="/Filieres/Index" asp-route-id="@item.ID">Filières</a>
+            </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |

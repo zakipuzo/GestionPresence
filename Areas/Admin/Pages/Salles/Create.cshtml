@@ -27,6 +27,7 @@
                 <label asp-for="Salle.EcoleSiteId" class="control-label"></label>
                 <select asp-for="Salle.EcoleSiteId" class ="form-control" asp-items="ViewBag.EcoleSiteId"></select>
             </div>
+              <a asp-area="Sites" asp-page="/Create">Ajouter un nouveau site</a>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
@@ -35,7 +36,7 @@
 </div>
 
 <div>
-    <a asp-page="Index">Back to List</a>
+    <a asp-page="Index">Retour à la liste</a>
 </div>
 
 @section Scripts {

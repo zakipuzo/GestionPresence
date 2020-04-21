@@ -1,16 +1,17 @@
 @page
+@inject UserManager<IdentityUser> UserManager
 @model gestionpresence.Areas.Admin.Pages.Utilisateurs.IndexModel
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Liste des utilisateurs</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="AddUsers">Nouveau</a>
 </p>
-<table class="table">
+<table id="mytable" class="table">
     <thead>
         <tr>
             <th>
@@ -26,7 +27,8 @@
             <th>
                 @Html.DisplayNameFor(model => model.AppUser[0].Email)
             </th>
-        
+
+            <th>Roles</th>
          
             <th></th>
         </tr>
@@ -45,6 +47,11 @@
          
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
+            </td>
+
+            <td>
+               @UserManager.GetRolesAsync(item)
+                  
             </td>
            
             <td>

@@ -56,6 +56,8 @@ namespace GestionPresence.Areas.Identity.Pages.Account
         public InputModel Input { get; set; }
 
 
+    [BindProperty]
+    public AnneeUniversitaire AnneeU{get;set;}
 
         public string ReturnUrl { get; set; }
 
@@ -135,6 +137,10 @@ namespace GestionPresence.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
+                AnneeU.AnneeCourante=true;
+              _db.AnneeUniversitaires.Add(AnneeU);
+              _db.SaveChanges();
+
                 var user = new AppUser
                 {
                     UserName = Input.Email,

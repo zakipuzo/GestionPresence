@@ -8,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Anneesuniversitaires
 {
+    [Authorize (Roles=UsersRoles.Admin)]
     public class EditModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
@@ -22,6 +24,8 @@ namespace gestionpresence.Areas.Admin.Anneesuniversitaires
 
         [BindProperty]
         public AnneeUniversitaire AnneeUniversitaire { get; set; }
+
+    
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -41,13 +45,17 @@ namespace gestionpresence.Areas.Admin.Anneesuniversitaires
 
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://aka.ms/RazorPagesCRUD.
+
+
+        public string statusmsg;
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
-
+            
+            
             _context.Attach(AnneeUniversitaire).State = EntityState.Modified;
 
             try
@@ -60,6 +68,15 @@ namespace gestionpresence.Areas.Admin.Anneesuniversitaires
                         }
                     }
                 }
+                else{
+                    AnneeUniversitaire.AnneeCourante=true;
+
+                    statusmsg="Veuillez choisir une autre année courante";
+                    return Page();
+
+                }
+                
+               
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)

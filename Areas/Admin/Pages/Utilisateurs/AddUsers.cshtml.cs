@@ -19,6 +19,7 @@ using GestionPresence.Models;
 namespace gestionpresence.Areas.Admin.Pages.Utilisateurs
 {
     
+
     [Authorize (Roles=UsersRoles.Admin)]
     public class AddUsersModel : PageModel
     {
@@ -176,7 +177,7 @@ namespace gestionpresence.Areas.Admin.Pages.Utilisateurs
             }
           
                       
-             StatusMessage = "Error: Une erreur s'est produit, veuillez réessayer.";
+             StatusMessage = "Error: Une erreur s'est produit, le nom d'utilisateur ou code RFID déjà existe!.";
 
            
             return RedirectToPage();

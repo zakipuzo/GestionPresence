@@ -76,7 +76,7 @@ namespace GestionPresence.Data
 
         }
 
-
+        
         public DbSet<AppUser> AppUSers { get; set; }
 
         public DbSet<AnneeUniversitaire> AnneeUniversitaires { get; set; }

@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Pages.Groupes
 {
+     [Authorize (Roles=UsersRoles.Admin)]
     public class CreateModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;

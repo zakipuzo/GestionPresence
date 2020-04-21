@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Pages.FiliereMatieres
 {
+    
+ [Authorize (Roles=UsersRoles.Admin)]
     public class DetailsModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;

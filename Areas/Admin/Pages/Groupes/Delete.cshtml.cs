@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Pages.Groupes
 {
+     [Authorize (Roles=UsersRoles.Admin)]
     public class DeleteModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
@@ -41,13 +43,14 @@ namespace gestionpresence.Areas.Admin.Pages.Groupes
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
+           
             if (id == null)
             {
                 return NotFound();
             }
 
             Groupe = await _context.Groupes.FindAsync(id);
-
+         
             if (Groupe != null)
             {
                 _context.Groupes.Remove(Groupe);

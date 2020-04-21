@@ -8,9 +8,9 @@
 <h1>Seance de </h1>
 
 <p>
-    <a asp-page="Create" asp-route-id="@Model.groupeid">Create New</a>
+    <a asp-page="Create" asp-route-id="@Model.groupeid">Nouveau</a>
 </p>
-<table class="table">
+<table id="mytable" class="table">
     <thead>
         <tr>
             <th>
@@ -26,7 +26,7 @@
             <th>
                Matière
             </th>
-            <th></th>
+           
             <th></th>
         </tr>
     </thead>
@@ -47,9 +47,7 @@
                 @Html.DisplayFor(modelItem => item.FiliereMatiere.Matiere.Libelle)
             </td>
 
-            <td>
-               <a  asp-area="Admin" asp-page="/Presences/Index" asp-route-id="@item.ID"> Présences</a>
-            </td>
+            
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |

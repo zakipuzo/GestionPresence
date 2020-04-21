@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using GestionPresence.Data;
 using GestionPresence.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestionpresence.Areas.Admin.Anneesuniversitaires
 {
+    [Authorize (Roles=UsersRoles.Admin)]
     public class DeleteModel : PageModel
     {
         private readonly GestionPresence.Data.ApplicationDbContext _context;
@@ -49,6 +51,20 @@ namespace gestionpresence.Areas.Admin.Anneesuniversitaires
 
             if (AnneeUniversitaire != null)
             {
+                if(_context.AnneeUniversitaires.Count()==1){
+
+                        return Page();
+
+                }
+
+                if(AnneeUniversitaire.AnneeCourante==true){
+                   var nvanneecourante= _context.AnneeUniversitaires.Where(x=>x.ID!=AnneeUniversitaire.ID).FirstOrDefault();
+
+                   nvanneecourante.AnneeCourante=true;
+
+                _context.SaveChanges();
+                }
+
                 _context.AnneeUniversitaires.Remove(AnneeUniversitaire);
                 await _context.SaveChangesAsync();
             }
